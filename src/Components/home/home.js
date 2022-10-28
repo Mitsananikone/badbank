@@ -1,7 +1,8 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
 
 function Home() {
+
+    console.log("Home Loaded");
+    
     return (
         <div>
             <h3>Home Component</h3>

@@ -1,7 +1,8 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
 
 function Deposit() {
+
+    console.log("Deposit Loaded");
+
     return (
         <div>
             <h3>Deposit Component</h3>

@@ -1,42 +1,45 @@
 import './App.css';
-import Spa from './index.js';
-import ReactDOM from "react-dom";
-import {BrowserRouter as Router,
-  Switch,
+import ReactDOM from "react-dom/client";
+import {BrowserRouter, Routes,
+ // Switch,
   Route,
-  Link
+  Link,
   } from "react-router-dom";
 import Home from "./Components/home/home.js";
 import Withdrawl from "./Components/withdrawl/withdrawl.js";
 import Deposit from "./Components/deposit/deposit.js";
-import Create_Account from "./Components/create_account/create_account.js";
-import All_Data from "./Components/all_data/all_data.js";
+import CreateAccount from "./Components/create_account/create_account.js";
+import AllData from "./Components/all_data/all_data.js";
 
-console.log("App Loaded")
+
   function App() {
+    console.log("App Loaded")
     return (
-        <Router>
+      <>
+      <BrowserRouter>
             <div>
                 <h1>Routing - Hello World</h1>
                 <Link to="/"> Home </Link> --
-                <Link to="./Components/withdrawl/"> Withdrawl </Link> --
-                <Link to="./Components/deposit/"> Deposit </Link> --
-                <Link to="./Components/all_data/"> All Data </Link> --
-                <Link to="./Components/create_account"> Create Account </Link>
+                <Link to="/Components/withdrawl/"> Withdrawl </Link> --
+                <Link to="/Components/deposit/"> Deposit </Link> --
+                <Link to="/Components/all_data/"> All Data </Link> --
+                <Link to="/Components/create_account/"> Create Account </Link>
                 <hr/>
-                <Route path="/" exact           element={Home} />
-                <Route path="/withdrawl/"       element={Withdrawl} />
-                <Route path="/deposit/"         element={Deposit} />
-                <Route path="/all_data/"        element={All_Data} />
-                <Route path="/create_account/"   element={Create_Account} />
+            
+                <Routes>
+                  <Route path="/" exact element={<Home/>} />
+                  <Route path="/Components/withdrawl/"       element={<Withdrawl/>} />
+                  <Route path="/Components/deposit/" element={<Deposit/>} />
+                  <Route path="/Components/all_data/" element={<AllData/>} />
+                  <Route path="/Components/create_account/"  element={<CreateAccount/>} />
+                </Routes>
             </div>
-        </Router>
-    )
-  }
+          
+      </BrowserRouter>
+        </>
+    );
+  };
 
 export default App;
 
-ReactDOM.render(
-  <App/>,
-  document.getElementById('root')
-)
+
