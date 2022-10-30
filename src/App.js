@@ -1,4 +1,5 @@
 import './App.css';
+import React from "react";
 import ReactDOM from "react-dom/client";
 import {BrowserRouter, Routes,
  // Switch,
@@ -12,6 +13,7 @@ import CreateAccount from "./Components/create_account/create_account.js";
 import AllData from "./Components/all_data/all_data.js";
 
 
+const UserContext = React.createContext("null");
   function App() {
     console.log("App Loaded")
     return (
@@ -36,10 +38,11 @@ import AllData from "./Components/all_data/all_data.js";
             </div>
           
       </BrowserRouter>
-        </>
+    </>
     );
   };
 
 export default App;
+export {UserContext};
 
 
