@@ -2,9 +2,9 @@ import React from "react";
 import {UserContext} from '../../App.js';
 
 function Balance() {
-
-    console.log("Balance Loaded");
     const ctx = React.useContext(UserContext);
+    console.log("Balance Loaded");
+    
     return (
         <div>
             <h3>Balance Component</h3>

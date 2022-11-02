@@ -7,7 +7,7 @@ function CreateAccount() {
 
     return (
         <div>
-            <h3>CreateAccount Component</h3>
+            <h3>Create Account Component</h3>
             {JSON.stringify(ctx.users)}
         </div>
     )
