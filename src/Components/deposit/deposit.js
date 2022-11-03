@@ -1,16 +1,18 @@
 import React from "react";
 import {UserContext} from '../../App.js';
+import { useFormik } from "formik";
+import Account from '../account/account.js';
 
-function Deposit() {
-    const ctx = React.useContext(UserContext);
-    console.log("Deposit Loaded");
-
+const ATMDeposit = ({ onChange, isDeposit, isValid }) => {
+    const choice = ['Deposit', 'Cash Back'];
+    console.log(`ATM isDeposit: ${isDeposit}`);
     return (
-        <div>
-            <h3>Deposit Component</h3>
-            {JSON.stringify(ctx.users)}
-        </div>
-    )
-}
-
-export default Deposit;
+      <label className="label huge">
+        <h3> {choice[Number(!isDeposit)]}</h3>
+        <input id="number-input" type="number" width="200" onChange={onChange}></input>
+        <input type="submit" disabled={!isValid} width="200" value="Submit" id="submit-input"></input>
+      </label>
+    );
+  };
+  
+  export default ATMDeposit;

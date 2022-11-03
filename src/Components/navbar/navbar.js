@@ -1,5 +1,4 @@
-import {Link} from 'react-router-dom';
-import {UserContext} from '../../App.js';
+import {Link} from "react-router-dom";
 
 function NavBar() {
     return (
@@ -14,25 +13,19 @@ function NavBar() {
             
             <ul className="nav nav-pills navbar-right">
     <li className="nav-item">
-        <a className="nav-link" href="/">Home</a>
+        <Link className="nav-link" to="/">Bad Bank</Link>
     </li>
     <li className="nav-item">
-        <a className="nav-link" href="/Components/create_account">Create Account</a>
+        <Link className="nav-link" to="/Components/create_account">Create Account</Link>
     </li>
     <li className="nav-item">
-        <a className="nav-link" href="/Components/login">Login</a>
+        <Link className="nav-link" to="/Components/withdraw">Withdraw</Link>
     </li>
     <li className="nav-item">
-        <a className="nav-link" href="/Components/balance">Balance</a>
+        <Link className="nav-link" to="/Components/deposit">Deposit</Link>
     </li>
     <li className="nav-item">
-        <a className="nav-link" href="/Components/all_data">All Data</a>
-    </li>
-    <li className="nav-item">
-        <a className="nav-link" href="/Components/withdraw">Withdraw</a>
-    </li>
-    <li className="nav-item">
-        <a className="nav-link" href="/Components/deposit">Deposit</a>
+        <Link className="nav-link" to="/Components/all_data">All Data</Link>
     </li>
     
         </ul>

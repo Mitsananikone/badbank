@@ -1,16 +1,17 @@
 import React from "react";
-import {UserContext} from '../../App.js';
+import Card from '../../context';
+import bankLogo from '../../images/bank.png';
 
-function Home() {
-    const ctx = React.useContext(UserContext);
-    console.log("Home Loaded");
-    
+function Home(){
     return (
-        <div>
-            <h3>Home Component</h3>
-            {JSON.stringify(ctx.users)}
-        </div>
-    )
-}
+      <Card
+        txtcolor="black"
+        header="BadBank Landing Module"
+        title="Welcome to the bank"
+        text="For all your banking needs"
+        body={(<img src={bankLogo} alt="Bank Pic"/>)}
+      />    
+    );  
+  }
 
 export default Home;
